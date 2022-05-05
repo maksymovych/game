@@ -1,0 +1,57 @@
+{
+  "name": "maksymovych_login",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "bcrypt": "^5.0.1",
+    "cookie": "^0.4.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "formidable": "^3.1.4",
+    "i": "^0.3.7",
+    "ioredis": "^4.28.2",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.15",
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-cookie": "^1.0.0",
+    "koa-ejs": "^4.3.0",
+    "koa-router": "^10.1.1",
+    "koa-session2": "^2.2.10",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "npm": "^8.1.4",
+    "objection": "^3.0.0",
+    "pg": "^8.7.1",
+    "prettier": "^2.5.0",
+    "redis": "^4.0.0",
+    "socket.io": "^4.4.0"
+  },
+  "scripts": {
+    "seed": "knex seed:run",
+    "make-seed": "knex seed:make dev",
+    "migrate": "knex migrate:latest",
+    "start": "DEBUG_COLORS=true pm2 start index.js --no-daemon",
+    "dev": "nodemon index.js",
+    "docker": "docker-compose up",
+    "psql": "psql -h localhost -p 5433 -U docker",
+    "down": "knex migrate:down"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "dotenv": "^11.0.0"
+  }
+}
