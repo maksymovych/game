@@ -7,9 +7,9 @@ export const baseAxios = axios.create({
 });
 
 export const getUser = async () => {
-  // console.log('getSession I AM HERE BITCH 1111');
+
   const { data } = await baseAxios.get('/getSession');
-  console.log('Session', data);
+
   return data;
 };
 
